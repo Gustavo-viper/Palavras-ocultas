@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#050b16">
+<meta name="description" content="Palavras Ocultas — Forge Studios">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="stylesheet" href="style.css">
+<title>Palavras Ocultas — Forge Studios</title>
+</head>
+<body>
+<div class="app">
+<header class="topbar">
+  <div class="brand"><img class="brand-logo" src="assets/palavras-ocultas-logo.jpg" alt="Palavras Ocultas — Forge Studios"><div><strong>PALAVRAS OCULTAS</strong><span>FORGE STUDIOS</span></div></div>
+  <div class="status" id="networkStatus">● ONLINE</div>
+</header>
+
+<main>
+<section id="home" class="screen active">
+  <div class="hero">
+    <img class="game-logo" src="assets/palavras-ocultas-logo.jpg" alt="Logo oficial Palavras Ocultas"><div class="hero-badge">🔎 WORD SEARCH</div>
+    <h1>Encontre. <b>Desafie.</b> Evolua.</h1>
+    <p>Mais de <strong>1.000 palavras</strong>, partidas sem repetição e funcionamento offline.</p>
+  </div>
+  <div class="cards">
+    <button type="button" class="mode-card" data-start><span>🎮</span><b>Jogar</b><small>Caça-palavras clássico</small></button>
+    <button type="button" class="mode-card" data-daily><span>⚡</span><b>Desafio diário</b><small>Um novo desafio por dia</small></button>
+    <button type="button" class="mode-card" data-stats><span>📊</span><b>Estatísticas</b><small>Veja seu progresso</small></button>
+  </div>
+  <div class="feature-row"><span>📚 1.200+ palavras</span><span>📴 Offline</span><span>💾 Progresso local</span></div>
+</section>
+
+<section id="game" class="screen">
+  <div class="game-head">
+    <button class="back" data-home>←</button>
+    <div><small id="gameCategory">Categoria</small><h2 id="gameTitle">Caça-palavras</h2></div>
+    <div class="counter"><b id="foundCount">0</b>/<span id="totalCount">0</span></div>
+  </div>
+  <div class="hud">
+    <span>⏱️ <b id="timer">00:00</b></span>
+    <span>⭐ <b id="score">0</b></span>
+    <button id="hintBtn">💡 Dica</button>
+  </div>
+  <div class="grid-wrap"><div id="grid" class="grid"></div></div>
+  <div class="words-panel"><div class="panel-title">Palavras para encontrar</div><div id="wordList" class="word-list"></div></div>
+  <div id="message" class="message"></div>
+</section>
+
+<section id="stats" class="screen">
+ <div class="game-head"><button class="back" data-home>←</button><div><small>SEU PROGRESSO</small><h2>Estatísticas</h2></div></div>
+ <div class="stats-grid">
+  <div><strong id="statGames">0</strong><span>Partidas</span></div>
+  <div><strong id="statWords">0</strong><span>Palavras</span></div>
+  <div><strong id="statScore">0</strong><span>Pontos</span></div>
+  <div><strong id="statBest">0</strong><span>Melhor</span></div>
+ </div>
+ <div class="offline-note">💾 Tudo é salvo no aparelho. O jogo não precisa de internet depois que os arquivos forem carregados uma vez.</div>
+</section>
+</main>
+</div>
+<script src="words.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
